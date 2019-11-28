@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork 28.11.2019</title>
+
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+</head>
+
+    <body>
+        <div class="wrapper">
+        <input type="text" class="inpution">
+        <button class="go">Go!</button>
+        <div class="pole">
+        <div class="newdiv"></div>
+        </div>
+    <!-- JS -->
+        <script>
+            let button = document.querySelector('.go'); /*Кнопка*/
+            let inp = document.querySelector('.inpution'); /*Input*/
+            button.addEventListener('click', function() {
+                let cnt = Number(inp.value);
+                let msg = 'Введите число больше 0!';
+                if (cnt) {
+                    let c = 'Пустой Блок';
+                    msg = '';
+                    for(let i = 0; i < cnt; i++) {
+                        msg = `${msg}<div class="test">${c}</div>`;
+                    }
+                }
+                let el = document.querySelector('.newdiv');
+                el.innerHTML = msg;
+                console.clear();
+                console.log(msg);
+            });
+        </script>
+    </body>
+</html>
